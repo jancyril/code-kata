@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/jancyril/katas.svg?branch=master)](https://travis-ci.org/jancyril/katas)
+[![Build Status](https://travis-ci.org/jancyril/code-kata.svg?branch=master)](https://travis-ci.org/jancyril/code-kata)
 
-# Personal Katas
+# Code Kata
 
 Codes within this repository are for my personal exercises only.
 
