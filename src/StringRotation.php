@@ -16,7 +16,10 @@ class StringRotation
             $newString = substr($string, $x) . substr($string, 0, $x - strlen($string));
 
             foreach ($comparison as $compare) {
-                $newString == $compare ? $count++ : '';
+                if ($newString == $compare) {
+                    $count++;
+                    break;
+                }
             }
         }
 
