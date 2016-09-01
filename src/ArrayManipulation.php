@@ -67,7 +67,7 @@ class ArrayManipulation
                 }
             })->sort()->first();
         })->transform(function ($value) {
-            return $value == null ? -1 : $value;
+            return $value ?? -1;
         })->all();
     }
 }
