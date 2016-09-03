@@ -8,7 +8,7 @@ namespace Janitor;
  */
 class StringRotation
 {
-    public function check($string, $comparison = [])
+    public function check(string $string, array $comparison): bool
     {
         $count = 0;
 
@@ -23,6 +23,6 @@ class StringRotation
             }
         }
 
-        return $count == strlen($string) ?:false;
+        return $count == strlen($string) ?? false;
     }
 }

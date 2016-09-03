@@ -10,7 +10,7 @@ namespace Janitor;
  */
 class ClockAngles
 {
-    public function calculate($time)
+    public function calculate(string $time): float
     {
         $time = explode(':', trim($time));
         $short = $this->computeShortHand($time[0], $time[1]);
@@ -19,12 +19,12 @@ class ClockAngles
         return abs($short - $long);
     }
 
-    private function computeShortHand($hour, $minute)
+    private function computeShortHand(int $hour, int $minute): float
     {
         return (60 * $hour + $minute) / 2;
     }
 
-    private function computeLongHand($minute)
+    private function computeLongHand(int $minute): float
     {
         return 6 * $minute;
     }

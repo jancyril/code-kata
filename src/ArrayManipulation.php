@@ -17,7 +17,7 @@ class ArrayManipulation
      * @param  array  $data
      * @return array
      */
-    public function firstSolution($data = [])
+    public function firstSolution(array $data): array
     {
         $manipulated = [];
 
@@ -56,7 +56,7 @@ class ArrayManipulation
      * @param  array  $data
      * @return array
      */
-    public function secondSolution($data = [])
+    public function secondSolution(array $data): array
     {
         $sorted = collect($data)->sort();
 

@@ -13,7 +13,7 @@ namespace Janitor;
  */
 class MinMinMax
 {
-    public function firstSolution($numbers = [])
+    public function firstSolution(array $numbers): array
     {
         asort($numbers);
         $min = current($numbers);
@@ -29,7 +29,7 @@ class MinMinMax
         return [$min, $between, $max];
     }
 
-    public function secondSolution($numbers = [])
+    public function secondSolution(array $numbers): array
     {
         $filtered = collect([collect($numbers)->min(), collect($numbers)->max()]);
 

@@ -4,7 +4,7 @@ namespace Janitor;
 
 class DecimalToBinary
 {
-    public function convert($decimal)
+    public function convert(int $decimal): string
     {
         $result = '';
         $byte = pow(2, 32-1);
