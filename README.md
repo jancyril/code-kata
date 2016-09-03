@@ -3,6 +3,7 @@
 # Code Kata
 
 Codes within this repository are for my personal exercises only.
+Some codes contains features specific to PHP 7 only.
 
 ## Source of Programming Problems
  - https://programmingpraxis.com/
