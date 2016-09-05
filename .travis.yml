@@ -3,5 +3,4 @@ php:
   - '7.0'
 script:
   - composer install
-  - composer dumpautoload
   - phpunit

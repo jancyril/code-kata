@@ -34,9 +34,9 @@ class MinMinMax
         $filtered = collect([collect($numbers)->min(), collect($numbers)->max()]);
 
         $between[] = collect(range($filtered[0], $filtered[1]))->filter(function ($decimal) use ($numbers) {
-            return (! in_array($decimal, $numbers));
+            return !in_array($decimal, $numbers);
         })->first();
 
-        return array_values(collect($between)->merge($filtered)->sort()->toArray());
+        return array_values(collect($between)->merge($filtered)->sort()->all());
     }
 }
