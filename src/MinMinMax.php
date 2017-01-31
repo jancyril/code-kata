@@ -19,10 +19,10 @@ class MinMinMax
         $min = current($numbers);
         $max = end($numbers);
 
-        for ($decimal = $min + 1; $decimal < $max; $decimal++) { 
-            if (! in_array($decimal, $numbers)) {
-               $between = $decimal;
-               break;
+        for ($decimal = $min + 1; $decimal < $max; ++$decimal) {
+            if (!in_array($decimal, $numbers)) {
+                $between = $decimal;
+                break;
             }
         }
 

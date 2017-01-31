@@ -7,10 +7,10 @@ class DecimalToBinary
     public function convert(int $decimal): string
     {
         $result = '';
-        $byte = pow(2, 32-1);
+        $byte = pow(2, 32 - 1);
 
         while ($byte > 0) {
-            $result .= ($decimal&$byte) == 0 ? '0' : '1'; 
+            $result .= ($decimal & $byte) == 0 ? '0' : '1';
             $byte = $byte >> 1;
         }
 

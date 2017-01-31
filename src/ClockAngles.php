@@ -5,7 +5,7 @@ namespace Janitor;
 /**
  * Write a program that, given a time as hours and minutes (using a 12-hour clock),
  * calculates the angle between the two hands. For instance, at 2:00 the angle is 60°.
- * 
+ *
  * See https://programmingpraxis.com/2016/07/01/clock-angles/
  */
 class ClockAngles

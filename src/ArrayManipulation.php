@@ -3,18 +3,20 @@
 namespace Janitor;
 
 /**
- * Given an array of positive integers, replace every element with the least greater element to its right. 
+ * Given an array of positive integers, replace every element with the least greater element to its right.
  * If there is no greater element to its right, replace it with -1.
  * For instance, given the array [8, 58, 71, 18, 31, 32, 63, 92, 43, 3, 91, 93, 25, 80, 28],
  * the desired output is [18, 63, 80, 25, 32, 43, 80, 93, 80, 25, 93, -1, 28, -1, -1].
- * 
+ *
  * See https://programmingpraxis.com/2016/07/22/array-manipulation/
  */
 class ArrayManipulation
 {
     /**
-     * Vanilla PHP solution
-     * @param  array  $data
+     * Vanilla PHP solution.
+     *
+     * @param array $data
+     *
      * @return array
      */
     public function firstSolution(array $data): array
@@ -24,7 +26,7 @@ class ArrayManipulation
         foreach ($data as $key => $value) {
             $replacement = -1;
 
-            for ($x = 0; $x < count($data); $x++) {
+            for ($x = 0; $x < count($data); ++$x) {
                 $temp = 0;
                 if ($key >= $x) {
                     continue;
@@ -36,7 +38,7 @@ class ArrayManipulation
 
                 $temp = $data[$x];
 
-                for ($y = 0; $y < count($data); $y++) {
+                for ($y = 0; $y < count($data); ++$y) {
                     if ($temp > $data[$y] && $data[$y] > $value && $y > $key) {
                         $temp = $data[$y];
                     }
@@ -52,8 +54,10 @@ class ArrayManipulation
     }
 
     /**
-     * Shorter solution using illuminate collection
-     * @param  array  $data
+     * Shorter solution using illuminate collection.
+     *
+     * @param array $data
+     *
      * @return array
      */
     public function secondSolution(array $data): array
